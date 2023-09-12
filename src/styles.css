@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-gray: #444;
+  --main-yellow: #dec129;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Cambria, Cochin;
+  color: var(--main-gray);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-gray);
+  transition: 0.4s;
+}
+
+a:hover {
+  color: var(--main-yellow);
+}
