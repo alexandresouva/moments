@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+  border-bottom: 1px solid chocolate;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.brand img {
+  height: 4rem;
+}
+
+.brand h2 {
+  font-size: 2.4rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+.link a {
+  font-size: 1.6rem;
+}
+
+#add-moment a {
+  color: var(--main-yellow);
+}
+
+.brand > h2:hover,
+.link a:hover {
+  color: var(--main-yellow);
+}

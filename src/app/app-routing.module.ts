@@ -7,7 +7,7 @@ import { NewMomentComponent } from './components/pages/new-moment/new-moment.com
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'moements/new', component: NewMomentComponent },
+  { path: 'moments/new', component: NewMomentComponent },
 ];
 
 @NgModule({
