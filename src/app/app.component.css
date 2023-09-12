@@ -1,0 +1,9 @@
+.page__grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 6.4rem;
+}
