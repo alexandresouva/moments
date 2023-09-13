@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validator, Validators } from '@Angular/forms';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Moment } from 'src/app/Interfaces/Moment';
 
 @Component({
   selector: 'app-moment-form',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validator, Validators } from '@Angular/forms';
 })
 export class MomentFormComponent implements OnInit {
   @Input() btnText!: string;
-
+  @Output() onSubmit = new EventEmitter<Moment>();
   momentForm!: FormGroup;
 
   // Executado antes da inicialização do componente. Injeção de dependências.
@@ -40,10 +41,15 @@ export class MomentFormComponent implements OnInit {
     return this.momentForm.get('description')!;
   }
 
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    this.momentForm.patchValue({ image: file });
+  }
+
   submitForm() {
     if (this.momentForm.valid) {
-      console.log('Enviou formulário');
+      this.onSubmit.emit(this.momentForm.value);
+      console.log('Enviou dados do formulário');
     }
-    console.log(this.description);
   }
 }
