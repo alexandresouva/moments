@@ -1,0 +1,15 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+.about a {
+  text-decoration: underline;
+}

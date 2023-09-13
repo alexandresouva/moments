@@ -29,6 +29,13 @@ a:hover {
   color: var(--main-yellow);
 }
 
+/* UTILITY CLASS */
+.secondary-heading {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 /* FORM */
 .form {
   max-width: 48rem;
