@@ -1,0 +1,76 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4.8rem;
+}
+
+.search-container form {
+  width: 100%;
+  max-width: 36rem;
+  position: relative;
+}
+
+.search-container fa-icon {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+
+.search-container input {
+  padding: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.moments {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  width: 90%;
+  max-width: 140rem;
+}
+
+.moment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 32rem;
+  font-size: 1.4rem;
+}
+
+.moment img {
+  width: 100%;
+}
+
+.moment h3 {
+  font-size: 1.8rem;
+  padding: 1rem 0 0.6rem;
+}
+
+.default-msg {
+  font-size: 1.6rem;
+}
+
+.default-msg a:link,
+.default-msg a:visited {
+  color: var(--main-yellow);
+  font-weight: 600;
+  padding-bottom: 0.4px;
+  border-bottom: 1px solid var(--main-yellow);
+}
+
+.default-msg a:hover {
+  border-bottom: 1px solid transparent;
+}
