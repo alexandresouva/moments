@@ -15,6 +15,44 @@
   </div>
   <!-- TODO - Comments Section -->
   <div class="comments">
-    <h3>Comentários(0)</h3>
+    <h3>Comentários ({{moment.comments!.length > 0 ? moment.comments!.length : '0'}})</h3>
+    <div *ngIf="moment.comments!.length > 0; else noComments">
+      <div class="comment-container" *ngFor="let comment of moment.comments">
+        <p class="comment-text">{{comment.text}}</p>
+        <div class="comment-details">
+          <p class="comment-author">{{comment.username}}</p>
+          <p class="comment-date"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noComments>
+    <div class="noComments">
+      <p>Não há comentários.</p>
+    </div>
+  </ng-template>
+  <div class="new-comment">
+    <h3>Deixe um comentário</h3>
+    <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
+      <div class="form-group">
+        <label for="text">Mensagem</label>
+        <textarea type="text" placeholder="O que você quer conversar?" formControlName="text"></textarea>
+        <div *ngIf="username.invalid && formDir.submitted" class="validation-error">
+          <p *ngIf="text.errors?.['required']">
+            O campo deve ser preenchido.
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Nome</label>
+        <input type="text" placeholder="Digite seu nome" formControlName="username">
+        <div *ngIf="username.invalid && formDir.submitted" class="validation-error">
+          <p *ngIf="username.errors?.['required']">
+            O campo deve ser preenchido.
+          </p>
+        </div>
+      </div>
+      <button class="btn">Comentar</button>
+    </form>
   </div>
 </div>

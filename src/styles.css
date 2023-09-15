@@ -87,6 +87,15 @@ a:hover {
   background-color: #444;
 }
 
+/* ERROR MESSAGE TO INPUTS  */
+.validation-error p {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+  color: var(--error);
+  border-left: 3px solid var(--error);
+  padding-left: 0.5rem;
+}
+
 /* TEXT HIGHLIGHT */
 .highlight {
   color: var(--main-yellow);

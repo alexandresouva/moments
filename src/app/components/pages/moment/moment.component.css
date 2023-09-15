@@ -29,6 +29,8 @@ img {
   padding-bottom: 0.4rem;
 }
 
+/* BUTTONS */
+
 .actions {
   display: flex;
   justify-content: center;
@@ -71,11 +73,55 @@ img {
   border: 1px solid var(--error);
 }
 
+/* COMMENTS */
 .comments {
-  margin-bottom: 1rem;
+  margin-bottom: 4.8rem;
   padding: 1rem 0;
 }
 
-.comments h3 {
-  font-size: 1.8rem;
+.comments h3,
+.new-comment h3 {
+  font-size: 2.2rem;
+  padding-bottom: 2.4rem;
+}
+
+.noComments {
+  font-size: 1.6rem;
+}
+
+/* NEW COMMENT */
+
+.new-comment {
+  width: 100%;
+  max-width: 45rem;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.comment-container {
+  padding: 1rem 1.6rem 1.6rem;
+  border-bottom: 1px solid var(--main-gray);
+}
+
+.comment-text {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.comment-author {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.comment-date {
+  font-size: 1.4rem;
+}
+
+.comment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
