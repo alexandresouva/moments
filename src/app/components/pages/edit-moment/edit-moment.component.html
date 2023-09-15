@@ -1,0 +1,4 @@
+<div *ngIf="moment">
+  <h2 class="secondary-heading">O que mudou?</h2>
+  <app-moment-form [momentData]=" moment" [btnText]="btnText" (onSubmit)="updateMoment($event)"></app-moment-form>
+</div>

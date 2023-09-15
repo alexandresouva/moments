@@ -69,7 +69,7 @@ a:hover {
   height: 12rem;
 }
 
-/* BTN */
+/* BUTTON */
 .btn {
   font-weight: 700;
   font-size: 1.6rem;
@@ -85,4 +85,9 @@ a:hover {
 
 .btn:hover {
   background-color: #444;
+}
+
+/* TEXT HIGHLIGHT */
+.highlight {
+  color: var(--main-yellow);
 }

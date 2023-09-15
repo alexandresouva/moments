@@ -9,7 +9,9 @@ import { Moment } from 'src/app/Interfaces/Moment';
 })
 export class MomentFormComponent implements OnInit {
   @Input() btnText!: string;
+  @Input() momentData: Moment | null = null;
   @Output() onSubmit = new EventEmitter<Moment>();
+
   momentForm!: FormGroup;
 
   // Executado antes da inicialização do componente. Injeção de dependências.
@@ -18,16 +20,16 @@ export class MomentFormComponent implements OnInit {
   // Executado após a inicialização do componente
   ngOnInit(): void {
     this.momentForm = new FormGroup({
-      id: new FormControl(''),
-      title: new FormControl('', [
+      id: new FormControl(this.momentData ? this.momentData.id : ''),
+      title: new FormControl(this.momentData ? this.momentData.title : '', [
         Validators.required,
         Validators.minLength(3),
       ]),
-      description: new FormControl('', [
-        Validators.required,
-        Validators.minLength(20),
-      ]),
-      image: new FormControl(''),
+      description: new FormControl(
+        this.momentData ? this.momentData.description : '',
+        [Validators.required, Validators.minLength(20)]
+      ),
+      image: new FormControl(this.momentData ? this.momentData.image : ''),
     });
   }
 
