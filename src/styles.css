@@ -2,10 +2,13 @@
 :root {
   --main-gray: #444;
   --main-yellow: #967e08;
+
   --error: #dc3545;
   --success: #12b886;
   --warning: #fcc419;
+
   --blue: #1c7ed6;
+  --orange: #d2691e;
 }
 
 * {
@@ -32,6 +35,12 @@ a:hover {
 }
 
 /* UTILITY CLASS */
+.container {
+  width: 100%;
+  max-width: 140rem;
+  margin: auto;
+}
+
 .secondary-heading {
   font-size: 3.6rem;
   text-align: center;
