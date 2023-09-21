@@ -1,27 +1,36 @@
+![Tela inicial da IBM Tours](src/assets/app_preview.gif)
+
 # Moments
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Moments é uma aplicação que possibilita o registro de seus mais importantes. Adicione a descrição, insira uma foto e compartilhe a novidade. Pessoas poderão comentar e engajar a sua publicação.
 
-## Development server
+Para este projeto foram utilizados:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular v16.2.0
+- Node: 16.18.0
+- TypeScript
+- HTML e CSS
 
-## Code scaffolding
+Atenção: este repositório contém apenas o **front end** da aplicação **Moments.** Para acessar o back end responsável pela API, [clique aqui](https://github.com/matheusbattisti/curso_adonis_api_yt).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ⚙️ O que você irá encontrar aqui
 
-## Build
+### Code
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+:heavy_check_mark: SPA utilizando o pacote de rotas nativo do Angular.
 
-## Running unit tests
+:heavy_check_mark: CRUD de momentos;
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+:heavy_check_mark: Filtro de momentos;
 
-## Running end-to-end tests
+:heavy_check_mark: Inserção de comentários;
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+:heavy_check_mark: Formulário reativo e com validações
 
-## Further help
+:heavy_check_mark: Biblioteca de ícones _Font Awesome_
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Iniciando a aplicação localmente
+
+Execute `ng serve` para iniciar o servidor de desenvolvimento. A aplicação será inicializada na porta 4200, para visualizá-la acesse: `http://localhost:4200/`. A aplicação será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
+
+Certifique-se de estar rodando localmente a API, para isso, volte no início desta documentação.
